@@ -2,7 +2,7 @@
 
 Simple  API
 - API version: 1.0.0
-  - Build date: 2020-09-03T13:59:44.602Z[GMT]
+  - Build date: 2020-09-03T15:51:10.365Z[GMT]
 
 This is a simple API with auto mocking enabled
 
