@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**exampleGet**](DefaultApi.md#exampleGet) | **GET** /example | Server example operation
 [**pingGet**](DefaultApi.md#pingGet) | **GET** /ping | Server heartbeat operation
 
-
 <a name="exampleGet"></a>
 # **exampleGet**
 > exampleGet()

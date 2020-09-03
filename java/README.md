@@ -1,8 +1,8 @@
 # swagger-java-client
 
 Sample Application Flow OAuth2 Project
-- API version: 1.0.0
-  - Build date: 2020-09-03T10:04:54.782Z
+- API version: 1.0.0-oas3
+  - Build date: 2020-09-03T10:28:20.605Z[GMT]
 
 This is an example of using OAuth2 Application Flow in a specification to describe security to your API.
 
@@ -71,10 +71,9 @@ Then manually install the following JARs:
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
 ```java
-
 import io.swagger.client.*;
 import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
+
 import io.swagger.client.api.DefaultApi;
 
 import java.io.File;
@@ -84,7 +83,7 @@ public class DefaultApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        
+
         // Configure OAuth2 access token for authorization: application
         OAuth application = (OAuth) defaultClient.getAuthentication("application");
         application.setAccessToken("YOUR ACCESS TOKEN");
@@ -98,7 +97,27 @@ public class DefaultApiExample {
         }
     }
 }
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
 
+import io.swagger.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        
+        DefaultApi apiInstance = new DefaultApi();
+        try {
+            apiInstance.pingGet();
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#pingGet");
+            e.printStackTrace();
+        }
+    }
+}
 ```
 
 ## Documentation for API Endpoints
@@ -110,9 +129,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**exampleGet**](docs/DefaultApi.md#exampleGet) | **GET** /example | Server example operation
 *DefaultApi* | [**pingGet**](docs/DefaultApi.md#pingGet) | **GET** /ping | Server heartbeat operation
 
-
 ## Documentation for Models
-
 
 
 ## Documentation for Authorization
@@ -124,8 +141,7 @@ Authentication schemes defined for the API:
 - **Flow**: application
 - **Authorization URL**: 
 - **Scopes**: 
-  - write: allows modifying resources
-  - read: allows reading resources
+  - : 
 
 
 ## Recommendation
@@ -133,6 +149,5 @@ Authentication schemes defined for the API:
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
 
 ## Author
-
 
 
