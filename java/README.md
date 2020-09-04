@@ -2,7 +2,7 @@
 
 Simple  API
 - API version: 1.0.0
-  - Build date: 2020-09-04T11:59:20.305Z[GMT]
+  - Build date: 2020-09-04T12:00:15.526Z[GMT]
 
 This is a simple API with auto mocking enabled
 
@@ -73,7 +73,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 import io.swagger.client.*;
 import io.swagger.client.auth.*;
-
+import io.swagger.client.model.*;
 import io.swagger.client.api.DevelopersApi;
 
 import java.io.File;
@@ -106,6 +106,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [User](docs/User.md)
 
 ## Documentation for Authorization
 
