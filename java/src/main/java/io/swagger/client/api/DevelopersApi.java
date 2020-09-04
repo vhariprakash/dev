@@ -26,6 +26,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import io.swagger.client.model.InlineResponse200;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -119,39 +120,39 @@ public class DevelopersApi {
     }
 
     /**
-     * app login
-     * login to app 
+     * 
+     * login to app
      * @param userId user id to authenticate (required)
-     * @return String
+     * @return InlineResponse200
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public String login(String userId) throws ApiException {
-        ApiResponse<String> resp = loginWithHttpInfo(userId);
+    public InlineResponse200 login(String userId) throws ApiException {
+        ApiResponse<InlineResponse200> resp = loginWithHttpInfo(userId);
         return resp.getData();
     }
 
     /**
-     * app login
-     * login to app 
+     * 
+     * login to app
      * @param userId user id to authenticate (required)
-     * @return ApiResponse&lt;String&gt;
+     * @return ApiResponse&lt;InlineResponse200&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<String> loginWithHttpInfo(String userId) throws ApiException {
+    public ApiResponse<InlineResponse200> loginWithHttpInfo(String userId) throws ApiException {
         com.squareup.okhttp.Call call = loginValidateBeforeCall(userId, null, null);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * app login (asynchronously)
-     * login to app 
+     *  (asynchronously)
+     * login to app
      * @param userId user id to authenticate (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call loginAsync(String userId, final ApiCallback<String> callback) throws ApiException {
+    public com.squareup.okhttp.Call loginAsync(String userId, final ApiCallback<InlineResponse200> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -173,7 +174,7 @@ public class DevelopersApi {
         }
 
         com.squareup.okhttp.Call call = loginValidateBeforeCall(userId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<String>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

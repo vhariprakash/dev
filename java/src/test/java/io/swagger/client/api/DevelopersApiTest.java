@@ -13,6 +13,7 @@
 package io.swagger.client.api;
 
 import io.swagger.client.ApiException;
+import io.swagger.client.model.InlineResponse200;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -30,9 +31,9 @@ public class DevelopersApiTest {
     private final DevelopersApi api = new DevelopersApi();
 
     /**
-     * app login
+     * 
      *
-     * login to app 
+     * login to app
      *
      * @throws ApiException
      *          if the Api call fails
@@ -40,7 +41,7 @@ public class DevelopersApiTest {
     @Test
     public void loginTest() throws ApiException {
         String userId = null;
-        String response = api.login(userId);
+        InlineResponse200 response = api.login(userId);
 
         // TODO: test validations
     }

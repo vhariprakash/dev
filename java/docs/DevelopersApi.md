@@ -4,15 +4,15 @@ All URIs are relative to *https://virtserver.swaggerhub.com/hariprakash/SimpleAp
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**login**](DevelopersApi.md#login) | **GET** /app/login/{userId} | app login
+[**login**](DevelopersApi.md#login) | **GET** /app/login/{userId} | 
 
 <a name="login"></a>
 # **login**
-> String login(userId)
+> InlineResponse200 login(userId)
 
-app login
 
-login to app 
+
+login to app
 
 ### Example
 ```java
@@ -24,7 +24,7 @@ login to app
 DevelopersApi apiInstance = new DevelopersApi();
 String userId = "userId_example"; // String | user id to authenticate
 try {
-    String result = apiInstance.login(userId);
+    InlineResponse200 result = apiInstance.login(userId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DevelopersApi#login");
@@ -40,7 +40,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**String**
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 

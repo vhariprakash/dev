@@ -2,7 +2,7 @@
 
 Simple  API
 - API version: 1.0.0
-  - Build date: 2020-09-04T12:00:15.526Z[GMT]
+  - Build date: 2020-09-04T13:12:51.144Z[GMT]
 
 This is a simple API with auto mocking enabled
 
@@ -86,7 +86,7 @@ public class DevelopersApiExample {
         DevelopersApi apiInstance = new DevelopersApi();
         String userId = "userId_example"; // String | user id to authenticate
         try {
-            String result = apiInstance.login(userId);
+            InlineResponse200 result = apiInstance.login(userId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DevelopersApi#login");
@@ -102,11 +102,11 @@ All URIs are relative to *https://virtserver.swaggerhub.com/hariprakash/SimpleAp
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DevelopersApi* | [**login**](docs/DevelopersApi.md#login) | **GET** /app/login/{userId} | app login
+*DevelopersApi* | [**login**](docs/DevelopersApi.md#login) | **GET** /app/login/{userId} | 
 
 ## Documentation for Models
 
- - [User](docs/User.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
 
 ## Documentation for Authorization
 
