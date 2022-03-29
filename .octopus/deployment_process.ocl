@@ -1,0 +1,22 @@
+step "Run Azure DevOps Build Pipeline" {
+    properties = {
+        Octopus.Action.TargetRoles = "Dev"
+    }
+
+    action {
+        properties = {
+            AzureDevOpsAccessKey = <<-EOT
+                #{AzurePAT}
+                
+            EOT
+            AzureDevOpsBranch = "master"
+            AzureDevOpsOrganizationName = "vhariprakash"
+            AzureDevOpsPipelineName = "pet"
+            AzureDevOpsProjectName = "pet"
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Template.Id = "ActionTemplates-1"
+            Octopus.Action.Template.Version = "1"
+        }
+        worker_pool_variable = ""
+    }
+}
